@@ -12,7 +12,23 @@
            let password= document.getElementById("password").value
            let dob= document.getElementById("dob").value
            //data.innerHTML=name +" " +email+" "+password+" "+dob
-        data.innerHTML= `${name} ${email} ${password} ${dob}`
+        //data.innerHTML= `${name} ${email} ${password} ${dob}`
+        let users=[]
+        let user={
+            name:name,
+            email:email,
+            password:password,
+            dob:dob 
+           }
+
+           users.push(user)
+           console.log(users)
+           let len=users.length;
+           let str="";
+           for(let i=0;i<length;i++){
+            str=str+`<li>${users[i].name}-${users[i].email}</li>`;
+           }
+           data.innerHTML=str
         }
     </script>
 </head>
@@ -21,7 +37,7 @@
     <p><input type="text" id="name" placeholder="Enter Name"></p>
     <p><input type="text" id="email" placeholder="Enter email id"></p>
     <p><input type="password" id="password" placeholder="Enter password"></p>
-    <p><input type="datetime-local" id="dob"></p>
+    <p><input type="date" id="dob"></p>
     <button onclick="showData()">register</button>
     <hr />
     <div id="data"></div>
