@@ -1,89 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <center>
-    <h1>facebook</h1>
-    <div>
-        <h3>Create new account</h3>
-        <p>It's quick and easy.</p>
-        <hr>
-        <input type="text" placeholder="first name">
-        <input type="text" placeholder="surname"><br>
-        Date of birth:<br>
-        <select>
-            <option>---1---</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            <option>15</option>
-            <option>16</option>
-            <option>17</option>
-            <option>18</option>
-            <option>19</option>
-            <option>20</option>
-            <option>21</option>
-            <option>22</option>
-            <option>23</option>
-            <option>24</option>
-            <option>25</option>
-            <option>26</option>
-            <option>27</option>
-            <option>28</option>
-            <option>29</option>
-            <option>30</option>
-            <option>31</option>
+    <style>
+      body {
+        background-color: #eeeeee;
+      }
+      .container {
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px;
+        width: 400px;
+        margin: auto;
+      }
+      .row {
+        display: flex;
+        justify-content: center;
+      }
+      .title {
+        font-size: 30px;
+        margin-top: 30px;
+      }
+      .header {
+        font-size: 50px;
+        color: blue;
+        font-weight: bold;
+        font-family: verdana;
+      }
+      .caption {
+        font-size: 20px;
+        color: gray;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      input,
+      select {
+        width: 100%;
+        margin: 5px;
+        border-radius: 5px;
+        padding: 5px;
+        border: 1px solid gray;
+      }
+      button {
+        color: white;
+        background-color: rgb(73, 210, 73);
+        font-size: 20px;
+        width:50%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 0px;
+      }
+      .leftCaption {
+        color: gray;
+        margin-left: 5px;
+        font-size: 10px;
+      }
+      .qMark {
+        background-color: green;
+        border-radius: 5px;
+        color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 2px;
+      }
+      .radioClass {
+        border: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 5px;
+        border-radius: 5px;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="header">facebook</div>
+      </div>
+      <div class="row">
+        <div>
+          <div class="title">Create a new account</div>
+          <div class="caption">It's quick and easy.</div>
+        </div>
+      </div><hr>
+      <div class="row">
+        <input type="text" placeholder="Firstname" />
+        <input type="text" placeholder="Surname" />
+      </div>
+      <div class="row" style="justify-content: start">
+        <div class="leftCaption">
+          Date of Birth<span class="qMark"
+            ><abbr title="Click for more information">?</abbr></span
+          >
+        </div>
+      </div>
+      <div class="row">
+        <select id="day">
+            <option> </option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>17</option>
+    <option>18</option>
+    <option>19</option>
+    <option>20</option>
+    <option>21</option>
+    <option>22</option>
+    <option>23</option>
+    <option>24</option>
+    <option>25</option>
+    <option>26</option>
+    <option>27</option>
+    <option>28</option>
+    <option>29</option>
+    <option>30</option>
+    <option>31</option>
         </select>
-        <select>
-            <option>--january--</option>
-            <option>january</option>
-            <option>january</option>
-            <option>january</option>
-            <option>february</option>
-            <option>march</option>
-            <option>april</option>
-            <option>may</option>
-            <option>june</option>
-            <option>july</option>
-            <option>august</option>
-            <option>september</option>
-            <option>october</option>
-            <option>november</option>
-            <option>december</option>
+        <select id="month">
+            <option> </option>
+    <option>january</option>
+    <option>january</option>
+    <option>january</option>
+    <option>january</option>
+    <option>february</option>
+    <option>march</option>
+    <option>april</option>
+    <option>may</option>
+    <option>june</option>
+    <option>july</option>
+    <option>august</option>
+    <option>september</option>
+    <option>october</option>
+    <option>november</option>
+    <option>december</option>
         </select>
-        <select>
-            <option>---2001---</option>
-            <option>2002</option>
-            <option>2003</option>
-            <option>2004</option>
-            <option>2005</option>
-            <option>2006</option>
-            <option>2007</option>
-            <option>2008</option>
-            <option>2009</option>
-            <option>2010</option>
-        </select><br><br>
-        GENDER:<br><input type="radio" name="gender" value="male">male
-<input type="radio" name="gender" value="female">female<br><br>
-        <input type="text" placeholder="enter number or email address"><br><br>
-        <input type="password" placeholder="enter password"><br><br>
-
+        <select id="year">
+            <option> </option>
+    <option>2001</option>
+    <option>2002</option>
+    <option>2003</option>
+    <option>2004</option>
+    <option>2005</option>
+    <option>2006</option>
+    <option>2007</option>
+    <option>2008</option>
+    <option>2009</option>
+    <option>2010</option>
+        </select>
+      </div>
+      <div class="row" style="justify-content: start">
+        <div class="leftCaption">
+          Gender<span class="qMark"
+            ><abbr title="Click for more information">?</abbr></span
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="radioClass">
+          <div><label> Female</label></div>
+          <div><input type="radio" name="gender" /></div>
+        </div>
+        <div class="radioClass">
+            <div><label> Male</label></div>
+                <div><input type="radio" name="gender" /></div>
+        </div>
+        <div class="radioClass">
+            <div><label> Custom</label></div>
+            <div><input type="radio" name="gender" /></div>
+        </div>
+      </div>
+      <div class="row"><input type="text" placeholder="mobile number or email address"></div>
+      <div class="row"><input type="password" placeholder="password"></div>
+      <div class="row"><p style="color: gray;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At nam dolor, dicta dolorum impedit saepe ratione quam voluptatem eaque modi blanditiis fuga rem iusto, sunt delectus velit. Totam, enim temporibus.</p></div>
+      <div class="row"><button>Sign up</button></div>
     </div>
-    </center>
- 
-</body>
+  </body>
 </html>
