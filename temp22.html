@@ -114,8 +114,11 @@
       let dd = null;
       let mm;
       let yy;
-      let pronoun;
+      let pronoun = "NA";
       let g = "";
+      let movies;
+      let music;
+      let sports;
       const showData = () => {
         firstname = document.getElementById("firstname").value;
         surname = document.getElementById("surname").value;
@@ -126,7 +129,13 @@
         dd = Number(document.getElementById("day").value);
         mm = Number(document.getElementById("month").value);
         yy = Number(document.getElementById("year").value);
-        console.log(dd, mm, yy);
+        sports = document.getElementById("sports").checked;
+        music = document.getElementById("music").checked;
+        movies = document.getElementById("movies").checked;
+        let strInterests = "";
+        if (sports) strInterests += "Sports ";
+        if (music) strInterests += "Music ";
+        if (movies) strInterests += "Movies ";
         let dob = `${dd}-${months[mm]}-${yy}`;
         g = "";
         if (gender[0].checked) g = "Female";
@@ -139,6 +148,7 @@
           <p>Password:${password}</p>
           <p>Gender:${g}</p>
           <p>Date of Birth:${dob}</p>
+          <p>Interests:${strInterests}</p>
           <button>Confirm</button>
           <button onclick=showForm()>Edit</button>
         </div>
@@ -190,6 +200,7 @@
         <select id="month"></select>
         <select id="year"></select>
       </div>
+
       <div class="row" style="justify-content: start">
         <div class="leftCaption">
           Gender<span class="qMark"
@@ -217,33 +228,7 @@
           } name="gender" onclick="togglePronoun()" /></div>
         </div>
       </div>
-      <div class="row" style="justify-content: start">
-        <div class="leftCaption">
-          Interests<span class="qMark"
-            ><abbr title="Click for more information">?</abbr></span
-          >
-        </div>
-      </div>
-      <div class="row">
-        <div class="radioClass">
-          <div><label>cricket</ label></div>
-          <div><input type="checkbox" ${
-            g === "Female" && "checked"
-          } name="interests" onclick="togglePronoun()" /></div>
-        </div>
-        <div class="radioClass">
-          <div><label>singing</label></div>
-          <div><input type="checkbox" ${
-            g === "Male" && "checked"
-          } name="interests" onclick="togglePronoun()" /></div>
-        </div>
-        <div class="radioClass">
-          <div><label>movies</label></div>
-          <div><input type="checkbox" ${
-            g === "Male" && "checked"
-          } name="interests" onclick="togglePronoun()" /></div>
-        </div>
-      </div>
+
       <div class="row" style="justify-content: start">
         <div class="leftCaption">
           Interests<span class="qMark"
@@ -252,17 +237,36 @@
         </div>
       </div>
 
+
+      <div class="row">
+        <div class="radioClass">
+          <div><label> Movies</label></div>
+          <div><input type="checkbox" id='movies'${movies&&"checked"}></div>
+        </div>
+        <div class="radioClass">
+          <div><label> Music</label></div>
+          <div><input type="checkbox" id='music'${music&&"checked"}></div>
+        </div>
+        <div class="radioClass">
+          <div><label>Sports</label></div>
+          <div><input type="checkbox"${sports&&"checked"} id='sports' /></div>
+        </div>
+      </div>
+
+
      <div class="row">
       <select id="prSelect" style="display:none">
         <option value="NA" >Select your pronoun</option>
-        <option value="She" >She:"Wish her a happy birthday"</option>
+        <option value="She" ${
+          pronoun == "She" && "selected"
+        }>She:"Wish her a happy birthday"</option>
         <option value="He">He:"Wish him a happy birthday"</option>
         <option value="They" >They:"Wish them a happy birthday"</option>
       </select>
      </div>
 
       <div class="row">
-        <input type="text" value='${email}' id="email" placeholder="Mobile number or email address" />
+        <input type="text" value='${email}' id="email" placeholder="Mobule number or email address" />
       </div>
       <div class="row">
         <input type="password" value='${password}' id="password" placeholder="New password" />
@@ -296,6 +300,7 @@
           prSelect.style.display = "block";
         } else {
           prSelect.style.display = "none";
+          pronoun = "NA";
         }
       };
     </script>
