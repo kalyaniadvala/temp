@@ -217,6 +217,40 @@
           } name="gender" onclick="togglePronoun()" /></div>
         </div>
       </div>
+      <div class="row" style="justify-content: start">
+        <div class="leftCaption">
+          Interests<span class="qMark"
+            ><abbr title="Click for more information">?</abbr></span
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="radioClass">
+          <div><label>cricket</ label></div>
+          <div><input type="checkbox" ${
+            g === "Female" && "checked"
+          } name="interests" onclick="togglePronoun()" /></div>
+        </div>
+        <div class="radioClass">
+          <div><label>singing</label></div>
+          <div><input type="checkbox" ${
+            g === "Male" && "checked"
+          } name="interests" onclick="togglePronoun()" /></div>
+        </div>
+        <div class="radioClass">
+          <div><label> reading</label></div>
+          <div><input type="checkbox" ${
+            pronoun != "NA" && "checked"
+          } name="interests" onclick="togglePronoun()" /></div>
+        </div>
+      </div>
+      <div class="row" style="justify-content: start">
+        <div class="leftCaption">
+          Interests<span class="qMark"
+            ><abbr title="Click for more information">?</abbr></span
+          >
+        </div>
+      </div>
 
      <div class="row">
       <select id="prSelect" style="display:none">
@@ -232,7 +266,7 @@
       </div>
       <div class="row">
         <input type="password" value='${password}' id="password" placeholder="New password" />
-        <img src="assets/images/eye-hide.png" id='toggleEye' onclick='togglePwd()' width="40px">
+        <img src="assets/eye-hide.png" id='toggleEye' onclick='togglePwd()' width="40px">
       </div>
       <div class="row">
         <button onclick='showData()'>Sign Up</button>
