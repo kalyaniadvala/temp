@@ -15,14 +15,14 @@
         let down=0;
         b.onkeydown=(e)=>{
             console.log(e.key)
-            if(e.key=="ArrowRight")
-            left+=5;
-            if(e.key=="ArrowDown")
-            down+=5;
-            if(e.key=="ArrowLeft")
-            left-=5;
             if(e.key=="ArrowUp")
             down-=5;
+            if(e.key=="ArrowDown")
+            down+=5;
+            if(e.key=="ArrowRight")
+            left+=5;
+            if(e.key=="ArrowLeft")
+            left-=5;
             ball.style.left=left+"px";
             ball.style.top=down+"px";
             console.log(e.key)
